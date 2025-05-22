@@ -4,8 +4,9 @@ UPLOADER="./oss-uploader"
 
 # 检查依赖
 check_dependencies() {
-    if ! command -v libcamera-still &> /dev/null; then
-        echo "错误: libcamera-still 未安装"
+    LIBCAMERA_BIN=$(command -v libcamera-still)
+    if [ -z "$LIBCAMERA_BIN" ] || [ ! -x "$LIBCAMERA_BIN" ]; then
+        echo "错误: libcamera-still 未安装或无法执行"
         exit 1
     fi
     
