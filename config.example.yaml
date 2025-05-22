@@ -8,4 +8,4 @@ aliyun_oss:
 # 钉钉机器人配置
 dingtalk_bot:
   webhook: "https://oapi.dingtalk.com/robot/send?access_token=your_token"
-  secret: "your_secret"  # 加签密钥
+  secret: "your_secret"  # 加签密钥 
