@@ -20,8 +20,8 @@ capture_and_upload() {
     TIMESTAMP=$(date +%Y%m%d_%H%M%S)
     IMAGE_FILE="capture_$TIMESTAMP.jpg"
     
-    # 拍照
-    raspistill -o "$IMAGE_FILE" -q 100
+    # 拍照 (使用libcamera-still)
+    libcamera-still -o "$IMAGE_FILE" --quality 100
     
     # 上传到OSS并发送钉钉通知
     if "$UPLOADER" "$IMAGE_FILE"; then
