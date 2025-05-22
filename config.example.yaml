@@ -1,0 +1,11 @@
+# 阿里云OSS配置
+aliyun_oss:
+  endpoint: "your-oss-endpoint"  # 例如: oss-cn-hangzhou.aliyuncs.com
+  access_key_id: "your-access-key-id"
+  access_key_secret: "your-access-key-secret"
+  bucket_name: "your-bucket-name"
+
+# 钉钉机器人配置
+dingtalk_bot:
+  webhook: "https://oapi.dingtalk.com/robot/send?access_token=your_token"
+  secret: "your_secret"  # 加签密钥
