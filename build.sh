@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.0.0"
+VERSION="1.0.1"
 DIST_DIR="dist"
 BIN_DIR="${DIST_DIR}/bin"
 RELEASE_DIR="${DIST_DIR}/release"
@@ -31,6 +31,8 @@ build_for darwin arm64 ""
 build_for darwin amd64 "" 
 build_for linux arm64 ""
 build_for linux amd64 ""
+# 树莓派3B (armv7)
+GOARM=7 build_for linux arm ""
 
 # Windows版本如果需要可以添加
 # build_for windows amd64 ".exe"
